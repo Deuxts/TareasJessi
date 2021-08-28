@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Investigación CSS</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/blood.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Investigación CSS</h2> <br>
+				<p>Cesar David Arias Virgen</´p>
+					<h6>00618am</h6>
+			</section>
+			<section>
+				<section data-background-color="rgb(70, 100, 200)">¿Qué es CSS y para qué sirve?</section>
+				<section data-auto-animate data-transition="zoom">
+					<h2 style="color: brown;">Css:</h2>
+					<p style="font-size: 40%;">Es un lenguaje en cascada para darle "estilo" a nuestras paginas de html,
+						nació en los años 70's. Recordemos que Css solo nos ayuda a darle un mejor diseño visual a
+						nuestro sitio y sea más atractivo a las personas. En la siguiente imagen que vemos abajo podemos
+						apreciar precisamente la diferencia entre usar Css y el no hacerlo.
+				</section>
+				<section data-auto-animate>
+					<h2 style="color: brown;">Css:</h2>
+					<p style="font-size: 40%;">Es un lenguaje en cascada para darle "estilo" a nuestras paginas de html,
+						nació en los años 70's. Recordemos que Css solo nos ayuda a darle un mejor diseño visual a
+						nuestro sitio y sea más atractivo a las personas. En la siguiente imagen que vemos abajo podemos
+						apreciar precisamente la diferencia entre usar Css y el no hacerlo.
+					</p>
+					<img src="https://i.workana.com/wp-content/uploads/2018/11/bbc-css.png">
+					<p style="font-size: 30%;">Css podríamos usarlo para dale colores, tamaños, pociones y muchas cosas
+						más a distintos elementos</p>
+				</section>
+			</section>
+			<section>
+				<section data-background-color="rgb(20, 100, 50)" data-auto-animate data-transition="fade">¿Cuáles son
+					los componentes de las reglas CSS?</section>
+				<section>
+					<h2 style="color: brown;">Reglas</h2>
+					<p><small>Se le llama regla a los bloques de códigos que escribimos y dentro de los mismos hay
+							ciertas reglas que debemos respetar</small></p>
+					<img src="https://media.prod.mdn.mozit.cloud/attachments/2015/11/10/11925/03af36a6d402b4f93cbe9232bd925cf1/csspartes.png"
+						alt="">
+				</section>
+				<section>
+					<h2 style="color: brown;">Reglas</h2>
+					<ul>
+						<small>
+							<li>Selector:
+								<ul>Es quien comienza la regla y define a quien se aplicara, si a una etiqueca como los
+									es < p> o si sera aplicado a una "clase" </ul>
+							</li><br>
+							<li>Declaración:<ul>Especifica a cuál de las propiedades del elemento quieres dar estilo.
+								</ul>
+							</li><br>
+							<li>Propiedades: <ul>En CSS, seleccionas que propiedad quieres afectar en tu regla.</ul>
+							</li><br>
+						</small>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<p class="ejemplo"
+							style="color: crimson; font-size: 80%; font-family: 'Times New Roman', Times, serif; border: 22px solid black;">
+							Este es un ejemplo que afecta a esta linea de texto</p>
+						<pre><code data-trim data-noescape>
+							p.ejemplo {
+								color: crimson;
+								font-family: 'Times New Roman';
+							}
+						</code></pre><br>
+						<pre><code data-trim data-noescape>
+							< p class="ejemplo">
+								Este es un ejemplo que afecta a esta linea de texto
+							< /p>
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p> Por ultimo la prioridad</p>
+						<p><small>cuando escribimos reglas en Css siempre debemos recordar que entre más específicos sea
+								nuestro selector, esa regla tomara prioridad, el orden seria de mayor a menor </small>
+						</p>
+						<pre><code data-trim data-noescape>
+							p.ejemplo {
+								color: crimson;
+								font-family: 'Times New Roman';
+							}
+						</code></pre>
+						<pre><code data-trim data-noescape>
+							/* . para seleccionar clases  */
+							.ejemplo {
+								color: crimson;
+								font-family: 'Times New Roman';
+							}
+						</code></pre>
+						<pre><code data-trim data-noescape>
+							/* # para seleccionar Id's  */
+							#ejemplo {
+								color: crimson;
+								font-family: 'Times New Roman';
+							}
+						</code></pre>
+					</section>
+				</section>
+			</section>
+			<section data-background-color="rgb(20, 150, 200)"
+				style="font-weight: bolder; font-family: 'Times New Roman';"> Cómo se colocan comentarios en CSS
+				<pre><code data-trim data-noescape>
+					/* usando barra asterisco asterisco barra */
+					ejemplo {
+						font-family: 'Times New Roman';
+					}
+				</code></pre>
+			</section>
+			<section data-background-color="rgb(200, 100, 40)" >
+				<section>Cuáles son y en qué consisten las tres formas de añadir código CSS a HTML</section>
+				<section>
+					<h5>interno</h5>
+					<pre><code data-trim data-noescape>
+							< !DOCTYPE html>
+							< html>
+							< head>
+								< s tyle>
+									body {
+										background-color: blue;
+									}
+									h1 {
+										color: red;
+										padding: 60px;
+									}
+								</ s tyle>
+							</ head>
+							< body>
+								< h1>Ejemplo< / h 1>
+								< p>Esto es un párrafo< / p>
+							< / body>
+							< / html>
+					</code></pre>
+					<p><small>Se escribe al inicio antes del body las reglas que se deberán aplicar</small></p>
+				</section>
+				<section>
+					<h5>externo</h5>
+					<pre><code data-trim data-noescape>
+						.xleftcol {
+							float: left;
+							width: 33%;
+							background:#809900;
+						}
+						
+						.xmiddlecol {
+							float: left;
+							width: 34%;
+							background:#eff2df;
+						}
+					</code></pre>
+					<pre><code data-trim data-noescape>
+						< link rel="stylesheet" type="text/css" href="style.css" />
+					</code></pre>
+					
+					<p><small>Se escribe en un documento .css y se carga usando el link</small></p>
+				</section>
+				<section>
+					<h5>En linea</h5>
+					<pre><code data-trim data-noescape>
+						< h1 s tyle="color:white;padding:30px;">ejemplo< /h1>
+						< p s tyle="color:white;">Esto es un párrafo.< /p>
+					</code></pre>
+					<p><small>Se escribe directamente durante la linea de html usando la palabra "style" </small></p>
+				</section>
+			</section>
+			<section data-background-color="rgb(70, 10, 20)">¿Por qué se recomienda el uso de CSS?
+				<br><br>
+				<small>
+					<ol>
+						<li>Separación del contenido y presentación.</li>
+						<li>Flexibilidad.</li>
+						<li>Unificación del diseño de las páginas del sitio.</li>
+						<li>Optimización de los tiempos de carga y de tráfico en el servidor.</li>
+						<li>Precisión.</li>
+						<li>Accesibilidad y estructuración.</li>
+						<li>Limpieza del código fuente.</li>
+						<li>Compatibilidad y continuidad.</li>
+						<li>Estandarización frente a especificaciones propietarias.</li>
+					</ol>
+				</small>
+			</section>
+			<section data-background-color="rgb(0, 0, 10)">
+				<section>¿Se puede diseñar una página web sin CSS?
+					<p style="font-family: monospace; color: darkgray;"><small>
+						si, sin embargo esta pagina no sera muy atractiva visualmente, ejemplos de esto abajo:
+					</small></p>
+				</section>
+				<section>
+					<img src="https://www.paracrearunapaginaweb.com/wp-content/uploads/2021/01/como-crear-una-pagina-web-simple-con-html.png">
+				</section>
+			</section>
+			<section data-background-color="rgb(255, 230, 20)">¿Qué es cascada CSS?
+				<p><small>Significa que el orden de las reglas importa en CSS: cuando dos reglas tienen la misma especificidad, se aplica la que aparece en último lugar en el CSS.</small></p>
+				<pre><code data-trim data-noescape>
+					h1 { 
+						color: red; 
+					}
+					h1 { 
+						color: blue; 
+					}
+				</code></pre>
+				<p><small>En esta situación el h1 aparecerá azul pues fue la ultima orden que se recibió </small></p>
+					
+			</section>
+			<section data-background-color="rgb(200, 180, 200)">
+				<section>¿Qué es especificidad CSS?
+					<p><small>Es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. En pocas palabras entre más específicos seamos con nuestros selectores, mayor prioridad tendrán a pesar de que tengamos selectores parecidos. Incluso podemos usar !important para darle mayor prioridad </small></p>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+						table td    {height: 50px !important;}
+						.myTable td {height: 50px !important;}
+						#myTable td {height: 50px !important;}
+					</code></pre>
+				</section>
+			</section>
+			<section data-background-color="rgb(210, 250, 250)">¿Qué es herencia CSS?
+					<p><small>La herencia también debe entenderse en este contexto: algunos valores de las propiedades CSS que se han establecido para los elementos padre los heredan los elementos hijo, pero otros no.</small></p>
+			</section>
+			<section>
+				<section data-background-color="rgb(70, 100, 200)">¿Qué es padding?
+				<p><small>Establece el espacio de relleno requerido por todos los lados de un elemento. El área de padding es el espacio entre el contenido del elemento y su borde (border). No se permiten valores negativos.</small></p>
+				</section>
+				<section><h3 style="color: mediumpurple; padding: 1em;">ejemplo</h3>
+					<pre><code data-trim data-noescape>
+						.texto{
+							padding: 1em; /*afecta a todos los lados por igual*/
+							padding: 10% 0; /* el 10% afecta a los lados de arriba y abajo
+							                   y el 0 afecta los lados */
+							padding: 10px 50px 30px 0;/* cada lado tiene su propio padding*/
+						}
+						
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section data-background-color="rgb(250, 150, 00)">¿Qué es la propiedad margin?
+					<p><small>La propiedad margin establece los márgenes de un elemento especificando entre uno y cuatro valores, donde cada valor es una longitud, un porcentaje o auto. Los valores en porcentaje se refieren al ancho del elemento padre. Se permiten márgenes negativos.</small></p>
+				</section>
+				<section>Sintaxis
+					<pre><code data-trim data-noescape>
+						/* Aplica a todos los cuatro lados */
+						margin: 1em;
+
+						/* Vertical | Horizontal */
+						margin: 5% auto;
+
+						/* Arriba | Horizontal | Abajo */
+						margin: 1em auto 2em;
+
+						/* Arriba | Derecha | Abajo | Izquierda */
+						margin: 2px 1em 0 auto;
+
+						/* Valores globales */
+						margin: inherit;
+						margin: initial;
+						margin: unset;
+						
+					</code></pre>
+				</section>
+				<section ">Ejemplo
+					<pre><code data-trim data-noescape>
+						.ex1 {
+							margin: auto;
+							background: gold;
+							width: 66%;
+						}
+						.ex2 {
+							margin: 20px 0px 0 -20px;
+							background: gold;
+							width: 66%;
+						}
+					</code></pre>
+				</section>
+			</section>
+			<section data-background-color="rgb(250, 200, 40)">
+				<section>¿Qué es la pseudoclase hover?
+					<p><small>La propiedad margin establece los márgenes de un elemento especificando entre uno y cuatro valores, donde cada valor es una longitud, un porcentaje o auto. Los valores en porcentaje se refieren al ancho del elemento padre. Se permiten márgenes negativos.</small></p>
+				</section>
+				<section><h1>ejemplo</h1>
+					<p>pasa tu mouse encima el link: <a href="https://www.youtube.com/watch?v=nZ5OOQOiWzk" target="blanc">REAL LIFE Gameplay vs Lore meme</a></p>
+
+				</section> 
+			</section>
+			<section data-background-color="rgb(100, 20, 40)">
+				<section>¿Cuál es la diferencia entre class e id?
+					<p><small>La diferencia entre una ID y una clase es que una ID se puede usar para identificar un solo elemento, mientras que una clase se puede usar para agrupar más de uno.</small></p>
+				</section>
+			</section>
+			<section data-background-color="rgb(250, 190, 200)">¿Cómo se restaura el valor por defecto de la propiedad de un elemento?
+				<pre><code data-trim data-noescape>
+					< div class="ejemplo" id="ejemplounico"> 
+						seré afectado por la clase y id
+					< /div>
+					< p clase="ejemplo"> solo me afectara la clase < /p>
+				</code></pre>
+			</section >
+			<section data-background-color="rgb(00, 10, 50)"style="font-size:large; font-family: Georgia, 'Times New Roman', Times, serif;" ><h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">fuentes</h1>
+				<p >
+					<small>
+						<ul>
+							<li>Cascada y herencia - Aprende sobre desarrollo web | MDN. (s. f.). Developer.Mozilla.Org. Recuperado 28 de agosto de 2021, de<a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance"> https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance</a></li><br>
+							<li> CSS. (2015, 11 julio). La estudiante que escribe.<a href=" https://dahianasr.wordpress.com/2013/04/10/css/"> https://dahianasr.wordpress.com/2013/04/10/css/</a> </li><br>
+							<li> CSS - Code - Esquema de regla CSS. (s. f.). css. Recuperado 28 de agosto de 2021, de <a href="https://3con14.biz/css/conceptos/5-esquema-de-regla-css.html">https://3con14.biz/css/conceptos/5-esquema-de-regla-css.html</a> </li><br>
+							<li> CSS :hover Selector. (s. f.). Selector. Recuperado 28 de agosto de 2021, de <a href="https://www.w3schools.com/cssref/sel_hover.asp">https://www.w3schools.com/cssref/sel_hover.asp</a></li><br>
+							<li> Especificidad - CSS | MDN. (2021, 27 agosto). Developer.Mozilla.Org. <a href="https://developer.mozilla.org/es/docs/Web/CSS/Specificity">https://developer.mozilla.org/es/docs/Web/CSS/Specificity</a></li><br>
+							<li> Herencia - CSS | MDN. (s. f.). Herencia - CSS | MDN. Recuperado 28 de agosto de 2021, de <a href="https://developer.mozilla.org/es/docs/Web/CSS/inheritance">https://developer.mozilla.org/es/docs/Web/CSS/inheritance</a></li><br>
+							<li> Quinn, J. P. (s. f.). Estructura y reglas de CSS. htmlhelp. Recuperado 28 de agosto de 2021, de <a href="https://www.htmlhelp.com/es/reference/css/structure.html">https://www.htmlhelp.com/es/reference/css/structure.html</a> </li><br>
+							<li>Selectores CSS - Aprende sobre desarrollo web | MDN. (2021, 27 agosto). Developer.Mozilla.<a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors">https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors</a>  </li><br>
+							<li> V., B. (2021, 1 junio). Diferencias entre los 3 tipos de estilos CSS: Interno, Externo e Inline. Tutoriales Hostinger. <a href="https://www.hostinger.mx/tutoriales/tipos-de-estilos-css">https://www.hostinger.mx/tutoriales/tipos-de-estilos-css</a></li><br>
+							<li> Selectores CSS - Aprende sobre desarrollo web | MDN. (2021, 27 agosto). Developer.Mozilla. <a href=""https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors>https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors</a> </li><br>
+						</ul>
+					</small>
+				</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
